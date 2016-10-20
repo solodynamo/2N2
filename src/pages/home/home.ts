@@ -4,6 +4,13 @@ import {GithubService} from '../../app/services/github'
 
 import { NavController } from 'ionic-angular';
 
+import { Observable} from 'rxjs/observable';
+
+import  'rxjs/Rx';
+
+import 'rxjs/add/operator/map';
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -13,7 +20,7 @@ export class HomePage {
   public foundRepos;
   public username;
 
-  constructor (private github: GithubService) {
+  constructor (private github: GithubService,  private nav: NavController) {
 
   }
 
